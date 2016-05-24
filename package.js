@@ -2,7 +2,7 @@ Package.describe({
   git: 'https://github.com/nicooprat/meteor-collection-counter.git',
   name: 'nicooprat:collection-counter',
   summary: 'Add counters to collections',
-  version: '1.0.0'
+  version: '1.0.1'
 });
 
 Package.onUse(function(api) {
