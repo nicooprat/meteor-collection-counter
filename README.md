@@ -1,6 +1,6 @@
 # Slug for collections
 
-Add counters to collections. Indicates which field you need to watch, and it automatically updates the corresponding specified field count.
+Add counters to collections. Indicate which fields you need to watch, and this behaviour will automatically update the corresponding specified field count.
 
 ### Install
 ```sh
