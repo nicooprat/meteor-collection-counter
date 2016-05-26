@@ -77,7 +77,7 @@ CollectionBehaviours.define('counter', function(opts = {}) {
       // $addtoset -> $inc + $addtoset.length
       if( modifier.$addtoset && modifier.$addtoset[field.source] ){
         modifier.$inc = modifier.$inc || {};
-        modifier.$inc[field.destination] = modifier.$addtoset[field.source].length;
+        modifier.$inc[field.destination] = _.union(modifier.$addtoset[field.source], doc[field.source]).length;
       }
     });
   });
