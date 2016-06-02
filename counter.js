@@ -14,8 +14,7 @@ CollectionBehaviours.define('counter', function(opts = {}) {
     _.each(options, (field) => {
       definition[field.destination] = {
         type: Number,
-        optional: true,
-        defaultValue: 0
+        optional: true
       };
     });
 
@@ -28,6 +27,8 @@ CollectionBehaviours.define('counter', function(opts = {}) {
     _.each(options, (field) => {
       if( !_.isEmpty(doc[field.source]) ) {
         doc[field.destination] = doc[field.source].length;
+      } else {
+        doc[field.destination] = 0;
       }
     });
   });
