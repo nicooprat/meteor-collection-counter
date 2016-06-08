@@ -61,7 +61,7 @@ CollectionBehaviours.define('counter', function(opts = {}) {
 
       _.each(fields, (field) => {
         modifier.$set = modifier.$set || {};
-        modifier.$set[field.destination] = simulation[field.source].length;
+        modifier.$set[field.destination] = simulation[field.source] ? simulation[field.source].length : 0;
       });
     }
   });
